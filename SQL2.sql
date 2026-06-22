@@ -130,7 +130,7 @@ INSERT INTO products (p_name, descr, price, stock_quantity) VALUES
 -- DELETE: 지우개로 공책에 적힌 글씨를 한 줄씩 쓱싹쓱싹 지우는 것 (지운 흔적이 남고, 시간도 걸림)
 -- TRUNCATE: 공책에서 글씨가 적힌 페이지 자체를 쫙 찢어서 버리는 것 (흔적도 없고 순식간에 새 장이 됨)
 -- DROP: 테이블을 존재 자체를 삭제
-truncate table products; -- 전부 다 지움
+truncate table products; -- 전부 삭제
 desc orders;
 
 insert into orders (customer_id,product_id,quantity) values
@@ -258,7 +258,7 @@ where p_name like "아__";
 select * from products 
 where p_name like "아%";
 
--- products -> price 500000 미만이거나 800000 초과 데이터 조회
+-- products -> price가 500000 미만이거나 800000 초과 데이터 조회
 
 select * from products
 where 500000 > price or 800000 < price;
