@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>css 실습</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }   
+
+            p {
+                color: blue;
+                font-weight: bold;
+                font-size: 20px;
+                font-style: italic;
+            }
+
+            .g-text {
+                color: gray;
+                font-weight: bold;
+            }
+
+            #s-text {
+                color: red;
+                font-size: 30px;
+                background-color: yellow;
+            }
+              a:link {
+            color: purple;
+            text-decoration: none;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+        a:active {
+            color: red;
+        }
+        </style> </head>
+    <body>
+        <h2> css 실습</h2>
+        <p>이것은 명시적 선택자 연습입니다. 파랑색으로 보입니다</p>
+        <p class="g-text">이것을 클래스 선택자 연습, 회색 적용</p>     
+        <p id="s-text">이것을 id선택자 연습, 빨강글씨 노랑 바탕</p> 
+        <p style="color: green; background-color: black;">인라인 선택자 연습</p>
+        <h3>[테스트] 아래 링크에 마우스를 올리거나 눌러보세요</h3>
+        <a href="https://www.naver.com" target="_blank">네이버로 이동하기 링크</a>
+    </body>
+</html>

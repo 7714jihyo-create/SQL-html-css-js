@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>자바스크립트 실습</title>
+        <script>
+function runDemo() {
+            //기본 대화상자(메서드) 종류 
+            alert("알림창입니다!"); // 단순 경고/알림 창 
+            
+            // prompt(내용, 초기값): 사용자에게 텍스트 입력을 받는 창 
+            var userName = prompt("당신의 이름을 입력하세요:", "홍길동"); 
+            
+            // confirm(): 확인(true)/취소(false)를 선택받는 창 
+             var isReady = confirm("시험 준비는 잘하고 있으시죠?");
+
+            // 콘솔 출력 메서드 (개발자 도구의 콘솔 탭에서 확인 가능) 
+            console.log("HTML 실습 페이지가 성공적으로 로드되었습니다!");
+            console.info("프로그래밍 기능사 필기 화이팅!");
+        // 화면 출력 메서드 (객체명 document와 함께 사용 필수) 
+            document.write("<h3>--- 실습 결과 화면 ---</h3>"); 
+            document.write("입력된 이름: " + userName + "<br>"); 
+            document.write("confirm 결과값: " + isReady + "<br><br>"); 
+            //  배열(Array) 조작 메서드
+            var students = ["이순신", "권율"];
+            
+            // push(): 배열 맨 끝에 값 추가 
+            students.push("홍길동");  //배열 상태: ["이순신", "권율", "홍길동"]으로 변경됨
+            document.write("push 후 배열: " + students + " (길이: " + students.length + ")<br>"); 
+
+            // pop(): 배열 맨 끝의 값 삭제 
+            var popValue = students.pop(); 
+            document.write("pop 된 값: " + popValue + " / 현재 배열: " + students + "<br>"); 
+            
+            // shift(): 배열 맨 앞의 값 삭제 
+            var shiftValue = students.shift();
+            document.write("shift 된 값: " + shiftValue + " / 현재 배열: " + students + "<br>"); 
+
+            //  unshift(): 배열 맨 앞에 새로운 값 추가
+            var unshiftValue = students.unshift("강감찬");
+           document.write("unshift 후 배열: " + students + " (길이: " + students.length + ")<br>"); 
+
+            // splice(시작위치, 삭제할개수, 추가할값...): 배열 요소 삭제/추가
+            var spliceValue = students.splice(1, 1,  "세종대왕", "장영실");
+            document.write("splice(1, 1,  세종대왕, 장영실) 된 값: " + spliceValue + " 삭제  / 현재 배열: " + students + "<br>");  //["강감찬", "세종대왕", "장영실"] (1번 인덱스에서 1개 삭제 후 2개 추가)
+
+            // slice(시작위치, 최종위치-1): 일부 요소 추출
+            var slicedArray = students.slice(1, 3);
+            document.write("slice(1, 3) 후 배열: " + slicedArray + "<br>"); 
+
+            // join(구분자): 배열의 요소들을  구분자로 결합하여 하나의 문자열로 결합함
+            var textResult = students.join(" ★ ");
+            document.write("join 후 문자열: " + textResult + "<br>");}
+        </script>
+    </head>
+    <body>
+        <h2>자바스크립트 핵심 마스터</h2>
+    <p>아래 버튼을 누르면  입출력 함수와 배열 메서드가 실행됩니다.</p>
+    
+    <input type="button" value="자바스크립트 핵심 예제 실행하기" onclick="runDemo()">
+    </body>
+</html>
