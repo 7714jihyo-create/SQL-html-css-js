@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>html 실습</title>
+</head>
+<body>
+    <h1> 가장 큰 제목 </h1>
+    <h2>중간 크기 제목</h2>
+    <h6>가장 작은 제목</h6>
+
+    프로그래밍 기능사 필기 <br><hr>
+    <p> 공백 3칸: &nbsp; &nbsp; &nbsp; 끝</p>
+    <p> 태그 기호 표시: &lt; html &gt; </p>
+    <h3>순서 없는 목록</h3>
+    <ul type="square">
+        <li>C언어</li>
+        <li>자바</li>
+    </ul>
+
+    <h3>순서 있는 목록</h3>
+    <ol start="10" type="A">
+        <li>파이썬</li>
+        <li>SQL</li>
+    </ol>
+
+    <h3>표 만들기</h3>
+    <table border="1">
+        <tr>
+            <th>연습1</th>
+            <th>연습2</th>
+            <th>연습3</th>
+        </tr>
+        <tr>
+            <td colspan="2">가로 2칸 (옆으로) 병합</td>
+            <td>나머지 칸</td>
+        </tr>
+        <tr>
+            <td rowspan="2">세로 2칸 병합</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <tr>
+            <th>자바</th>
+            <th>C</th>
+            <th>파이썬</th>
+            <th>SQL</th>
+        </tr>
+        <tr>
+            <td colspan="3">프로그래밍</td>
+            <td>데이터 베이스</td>
+        </tr>
+        <tr>
+            <td rowspan="2">A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+        </tr>
+    </table>
+
+    <h3>링크와 이미지</h3>
+    <a href="https://www.naver.com" target="_blank">
+        네이버 이동(새 창 열기)
+    </a>
+    <br><br>
+    <img src="sample.jpg" alt="샘플 이미지" width="100" height="100" title="이미지 연습">
+
+    <h3>폼과 입력양식</h3>
+    <form action="submit.php" method="post">
+        <label for="uid">아이디</label>
+        <input type="text" name="userid" id="uid" value="guest">
+        <br><br>
+
+        <label for="upw">비밀번호</label>
+        <input type="password" name="userpw" id="upw">
+        <br><br>
+
+        개인정보 동의:
+        <input type="radio" id="agree" name="pri" 
+        value="y" checked >
+        <label for="agree">동의</label>
+
+        <input type="radio" id="diagree" name="pri" 
+        value="n" >
+        <label for="diagree">비동의</label>
+        <br>관심 분야: 
+        <input type="checkbox" id="lang1" name="hobby" value="HTML">
+        <label for="lang1">HTML</label>
+        <input type="checkbox" id="lang2" name="hobby" value="CSS">
+        <label for="lang2">CSS</label><br><br>
+
+        <input type="button" value="중복확인">
+        <input type="reset" value="초기화">
+        <input type="submit" value="전송하기">
+
+    </form>
+</body>
+</html>
